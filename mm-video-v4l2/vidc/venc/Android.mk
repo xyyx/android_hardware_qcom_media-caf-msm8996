@@ -39,7 +39,9 @@ endif
 
 ifeq ($(TARGET_BOARD_PLATFORM),msm8996)
 libmm-venc-def += -D_UBWC_
+ifneq ($(QCPATH),)
 libmm-venc-def += -D_VQZIP_
+endif
 endif
 
 ifeq ($(call is-board-platform-in-list, $(TARGETS_THAT_USE_FLAG_MSM8226)),true)
@@ -75,7 +77,6 @@ libmm-venc-add-dep  := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 # ---------------------------------------------------------------------------------
 # 			Make the Shared library (libOmxVenc)
 # ---------------------------------------------------------------------------------
-ifneq ($(QCPATH),)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE                    := libOmxVenc
@@ -97,7 +98,6 @@ LOCAL_SRC_FILES   += src/video_encoder_device_v4l2.cpp
 include $(BUILD_SHARED_LIBRARY)
 
 ifeq ($(call is-board-platform-in-list, $(TARGETS_THAT_NEED_SW_VENC_MPEG4)),true)
-endif
 
 # ---------------------------------------------------------------------------------
 # 			Make the Shared library (libOmxSwVencMpeg4)
