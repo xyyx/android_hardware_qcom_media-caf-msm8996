@@ -21,11 +21,13 @@ libmm-vidc-def += -D_ANDROID_ICS_
 # ---------------------------------------------------------------------------------
 
 libmm-vidc-inc      := $(LOCAL_PATH)/inc
-libmm-vidc-inc      += $(TOP)/hardware/qcom/media/mm-core/inc
-libmm-vidc-inc      += $(TARGET_OUT_HEADERS)/qcom/display
-libmm-vidc-inc      += $(TOP)/hardware/qcom/media/libc2dcolorconvert
-libmm-vidc-inc      += $(TOP)/frameworks/av/include/media/stagefright
+libmm-vidc-inc      += $(TOP)/hardware/qcom/media-caf-msm8996/mm-core/inc
+libmm-vidc-inc      += $(TARGET_OUT_HEADERS)/qcom/display-caf-msm8996
+libmm-vidc-inc      += $(TOP)/hardware/qcom/media-caf-msm8996/libc2dcolorconvert
+libmm-vidc-inc      += $(TOP)/frameworks/av-caf/include/media/stagefright
 libmm-vidc-inc      += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
+libmm-vidc-inc      += $(TOP)/hardware/qcom/display-caf-msm8996/libgralloc
+libmm-vidc-inc      += hardware/qcom/display-caf-msm8996/libcopybit
 
 LOCAL_MODULE                    := libOmxVidcCommon
 LOCAL_MODULE_TAGS               := optional
