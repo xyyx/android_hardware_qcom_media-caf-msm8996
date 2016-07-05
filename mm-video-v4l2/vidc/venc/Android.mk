@@ -59,17 +59,18 @@ endif
 # Common Includes
 libmm-venc-inc      := $(LOCAL_PATH)/inc
 libmm-venc-inc      += $(TOP)/hardware/qcom/media-caf-msm8996/mm-video-v4l2/vidc/common/inc
-libmm-venc-inc      += hardware/qcom/media-caf-msm8996/mm-core/inc
-libmm-venc-inc      += hardware/qcom/media-caf-msm8996/libstagefrighthw
+libmm-venc-inc      += $(TOP)/hardware/qcom/media-caf-msm8996/mm-core/inc
+libmm-venc-inc      += $(TOP)/hardware/qcom/media-caf-msm8996/libstagefrighthw
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/qcom/display-caf-msm8996
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/adreno
-libmm-venc-inc      += frameworks/native-caf/include/media/hardware
-libmm-venc-inc      += frameworks/native-caf/include/media/openmax
-libmm-venc-inc      += hardware/qcom/media-caf-msm8996/libc2dcolorconvert
+libmm-venc-inc      += $(TOP)/frameworks/native-caf/include/media/hardware
+libmm-venc-inc      += $(TOP)/frameworks/native-caf/include/media/openmax
+libmm-venc-inc      += $(TOP)/hardware/qcom/media-caf-msm8996/libc2dcolorconvert
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/libvqzip
-libmm-venc-inc      += frameworks/av-caf/include/media/stagefright
+libmm-venc-inc      += $(TOP)/frameworks/av-caf/include/media/stagefright
 libmm-venc-inc      += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-libmm-venc.inc      += hardware/qcom/display-caf-msm8996/libgralloc
+libmm-venc-inc      += $(TOP)/hardware/qcom/display-caf-msm8996/libgralloc
+libmm-venc-inc	    += $(TOP)/hardware/qcom/display-caf-msm8996/libcopybit
 
 # Common Dependencies
 libmm-venc-add-dep  := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
