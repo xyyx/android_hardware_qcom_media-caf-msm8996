@@ -15,4 +15,3 @@ endif
 
 include $(QCOM_MEDIA_ROOT)/hypv-intercept/Android.mk
 
-endif
