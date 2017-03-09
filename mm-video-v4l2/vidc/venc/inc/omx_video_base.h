@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------------
-Copyright (c) 2010-2016, The Linux Foundation. All rights reserved.
+Copyright (c) 2010-2017, The Linux Foundation. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
@@ -690,6 +690,8 @@ class omx_video: public qc_omx_component
         bool output_use_buffer;
         int pending_input_buffers;
         int pending_output_buffers;
+
+        bool allocate_native_handle;
 
         uint64_t m_out_bm_count;
         uint64_t m_inp_bm_count;
